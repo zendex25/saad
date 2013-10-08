@@ -1,0 +1,2 @@
+module SectionSubjectsHelper
+end

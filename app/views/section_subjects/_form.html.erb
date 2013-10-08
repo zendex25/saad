@@ -1,0 +1,23 @@
+<%= simple_form_for(@section_subject) do |f| %>
+  <% if @section_subject.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@section_subject.errors.count, "error") %> prohibited this section_subject from being saved:</h2>
+
+      <ul>
+      <% @section_subject.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+    <%= f.input :section_id do %>
+      <%= f.select :section, Section.all.map{|s| [s.seccon, s.id]}, :include_blank => true %>
+    <% end %>
+  
+    <%= f.association :subject %>
+  
+    <%= f.button :submit %>
+  
+<% end %>

@@ -1,0 +1,20 @@
+<div id="system">
+
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+<h1>The System</h1>
+
+<table><tr><td></td>
+
+<th style="width:200px"><p>Monday and Friday</p></th>
+
+</tr>
+
+<% @timeslots.each do |timeslot| %>
+<tr><td><p><%= timeslot.start.to_s(:time) %>-<%= timeslot.finish.to_s(:time) %></p></td></tr>
+<% end %>
+</tr></table>
+
+</div>

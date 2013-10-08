@@ -1,0 +1,29 @@
+<h1>Listing day_timeslots</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Day</th>
+      <th>Timeslot</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @day_timeslots.each do |day_timeslot| %>
+      <tr>
+        <td><%= day_timeslot.day.name %></td>
+        <td><%= day_timeslot.timeslot.start.to_s(:time) %>-<%= day_timeslot.timeslot.finish.to_s(:time) %></td>
+        <td><%= link_to 'Show', day_timeslot %></td>
+        <td><%= link_to 'Edit', edit_day_timeslot_path(day_timeslot) %></td>
+        <td><%= link_to 'Destroy', day_timeslot, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Day timeslot', new_day_timeslot_path %>

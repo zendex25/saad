@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Start:</strong>
+  <%= @timeslot.start.to_s(:time) %>
+</p>
+
+<p>
+  <strong>Finish:</strong>
+  <%= @timeslot.finish.to_s(:time) %>
+</p>
+
+<%= link_to 'Edit', edit_timeslot_path(@timeslot) %> |
+<%= link_to 'Back', timeslots_path %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Day:</strong>
+  <%= @day_timeslot.day %>
+</p>
+
+<p>
+  <strong>Timeslot:</strong>
+  <%= @day_timeslot.timeslot %>
+</p>
+
+<%= link_to 'Edit', edit_day_timeslot_path(@day_timeslot) %> |
+<%= link_to 'Back', day_timeslots_path %>

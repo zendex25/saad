@@ -1,0 +1,28 @@
+<%= simple_form_for(@day_timeslot) do |f| %>
+  <% if @day_timeslot.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@day_timeslot.errors.count, "error") %> prohibited this day_timeslot from being saved:</h2>
+
+      <ul>
+      <% @day_timeslot.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+
+  
+    <%= f.association :day %>
+  
+  
+    <%= f.input :timeslot do %>
+      <%= f.select :timeslot, Timeslot.all.map{|t| [t.timecon, t.id]}, :include_blank => true %>
+    <% end %>
+  
+    <%= f.button :submit %>
+  
+  
+
+<% end %>
