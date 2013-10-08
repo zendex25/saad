@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131008123120) do
+ActiveRecord::Schema.define(version: 20131008162844) do
 
   create_table "day_timeslots", force: true do |t|
     t.integer  "day_id"
@@ -53,14 +53,22 @@ ActiveRecord::Schema.define(version: 20131008123120) do
   end
 
   create_table "schedules", force: true do |t|
-    t.integer  "day_timeslot_id"
-    t.integer  "section_subject_id"
+    t.integer  "day_id"
+    t.integer  "timeslot_id"
+    t.integer  "section_id"
+    t.integer  "subject_id"
+    t.integer  "professor_id"
+    t.integer  "room_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "schedules", ["day_timeslot_id"], name: "index_schedules_on_day_timeslot_id"
-  add_index "schedules", ["section_subject_id"], name: "index_schedules_on_section_subject_id"
+  add_index "schedules", ["day_id"], name: "index_schedules_on_day_id"
+  add_index "schedules", ["professor_id"], name: "index_schedules_on_professor_id"
+  add_index "schedules", ["room_id"], name: "index_schedules_on_room_id"
+  add_index "schedules", ["section_id"], name: "index_schedules_on_section_id"
+  add_index "schedules", ["subject_id"], name: "index_schedules_on_subject_id"
+  add_index "schedules", ["timeslot_id"], name: "index_schedules_on_timeslot_id"
 
   create_table "section_subjects", force: true do |t|
     t.integer  "section_id"

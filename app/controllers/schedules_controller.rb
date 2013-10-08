@@ -69,6 +69,6 @@ class SchedulesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def schedule_params
-      params.require(:schedule).permit(:day_timeslot_id, :section_subject_id)
+      params.require(:schedule).permit(:day_id, :timeslot_id, :section_id, :subject_id, :professor_id, :room_id)
     end
 end

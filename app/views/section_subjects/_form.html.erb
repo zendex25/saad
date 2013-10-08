@@ -11,8 +11,7 @@
     </div>
   <% end %>
 
-  
-    <%= f.input :section_id do %>
+    <%= f.input :section do %>
       <%= f.select :section, Section.all.map{|s| [s.seccon, s.id]}, :include_blank => true %>
     <% end %>
   

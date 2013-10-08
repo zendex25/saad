@@ -1,13 +1,33 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Day timeslot:</strong>
-  <%= @schedule.day_timeslot %>
+  <strong>Day:</strong>
+  <%= @schedule.day %>
 </p>
 
 <p>
-  <strong>Section subject:</strong>
-  <%= @schedule.section_subject %>
+  <strong>Timeslot:</strong>
+  <%= @schedule.timeslot %>
+</p>
+
+<p>
+  <strong>Section:</strong>
+  <%= @schedule.section %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @schedule.subject %>
+</p>
+
+<p>
+  <strong>Professor:</strong>
+  <%= @schedule.professor %>
+</p>
+
+<p>
+  <strong>Room:</strong>
+  <%= @schedule.room %>
 </p>
 
 <%= link_to 'Edit', edit_schedule_path(@schedule) %> |

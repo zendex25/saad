@@ -1,12 +1,12 @@
 Saad::Application.routes.draw do
 
+  resources :schedules
+
   resources :sections
 
   resources :departments
 
   resources :timeslots
-
-  resources :schedules
 
   resources :section_subjects
 

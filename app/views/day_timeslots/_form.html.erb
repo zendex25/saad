@@ -11,11 +11,7 @@
     </div>
   <% end %>
 
-  
-
-  
     <%= f.association :day %>
-  
   
     <%= f.input :timeslot do %>
       <%= f.select :timeslot, Timeslot.all.map{|t| [t.timecon, t.id]}, :include_blank => true %>
