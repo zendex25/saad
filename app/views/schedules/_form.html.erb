@@ -12,23 +12,19 @@
   <% end %>
 
   
-    <%= f.association :day %>
-  
-    <%= f.input :timeslot do %>
-      <%= f.select :timeslot, Timeslot.all.map{|t| [t.timecon, t.id]}, :include_blank => true %>
-    <% end %>
-  
-    <%= f.input :section do %>
-      <%= f.select :section, Section.all.map{|s| [s.seccon, s.id]}, :include_blank => true %>
-    <% end %>
-  
-    <%= f.association :subject %>
-  
-    <%= f.input :professor do %>
-      <%= f.select :professor, Professor.all.map{|p| [p.procon, p.id]}, :include_blank => true %>
+    
+    <%= f.input :day_timeslot do %>
+      <%= f.select :day_timeslot_id, DayTimeslot.all.map{|j| [j.jcon, j.id]}, :include_blank => true %>
     <% end %>
 
-  
+    <%= f.input :section_subject  do %>
+      <%= f.select :section_subject_id, SectionSubject.all.map{|j| [j.jcon, j.id]}, :include_blank => true %>
+    <% end %>
+    
+    <%= f.input :professor do %> 
+        <%= f.select :professor_id, Professor.all.map{|j| [j.procon, j.id]}, :include_blank => true %>
+    <% end %>
+
     <%= f.association :room %>
   
     <%= f.button :submit %>

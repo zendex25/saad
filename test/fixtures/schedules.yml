@@ -1,17 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  day_id: 
-  timeslot_id: 
-  section_id: 
-  subject_id: 
+  day_timeslot_id: 
+  section_subject_id: 
   professor_id: 
   room_id: 
 
 two:
-  day_id: 
-  timeslot_id: 
-  section_id: 
-  subject_id: 
+  day_timeslot_id: 
+  section_subject_id: 
   professor_id: 
   room_id: 

@@ -8,8 +8,8 @@ def contact
 	
 end
 
-def database
-end
+
+
 
 def system
 		
@@ -18,10 +18,15 @@ def system
 		@professors = Professor.all
 		@rooms = Room.all
 		@schedules = Schedule.all
+		@section_subjects = SectionSubject.all
+		@day_timeslots = DayTimeslot.all
+
+
+		
 		@sections = Section.all
 		@subjects = Subject.all
 		@timeslots = Timeslot.all
-
+		
 		
 end
 

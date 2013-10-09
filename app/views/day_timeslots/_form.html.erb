@@ -14,7 +14,7 @@
     <%= f.association :day %>
   
     <%= f.input :timeslot do %>
-      <%= f.select :timeslot, Timeslot.all.map{|t| [t.timecon, t.id]}, :include_blank => true %>
+      <%= f.select :timeslot_id, Timeslot.all.map{|t| [t.timecon, t.id]}, :include_blank => true %>
     <% end %>
   
     <%= f.button :submit %>

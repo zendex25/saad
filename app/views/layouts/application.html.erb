@@ -12,6 +12,8 @@
 
 </head>
 <body>
+
+
 <div id="sidebar">
 	<div id="logo">
 			<h1><a href="#">CAS</a></h1>
@@ -19,14 +21,14 @@
 	<div id="menu" class="boxed">
 		<div class="content">
 			<%= link_to 'Home', website_path %><br />
-			<%= link_to 'About Us', about_path %><br />
-			<%= link_to 'Contact Us', contact_path %><br />
+			<%= link_to 'About San Beda College', about_path %><br />
+			<%= link_to 'Contact San Beda College', contact_path %><br />
 			
 
 			<% if session[:user_id] %>
 			
-			<%= link_to 'Database', database_path %><br />
-			<%= link_to 'Schedule', system_path %><br />
+			
+			<%= link_to 'Scheduling', system_path %><br />
 			<%= link_to 'Logout', logout_path, :method => :delete %>
 
 			<% else %>

@@ -12,7 +12,7 @@
   <% end %>
 
     <%= f.input :section do %>
-      <%= f.select :section, Section.all.map{|s| [s.seccon, s.id]}, :include_blank => true %>
+      <%= f.select :section_id, Section.all.map{|s| [s.seccon, s.id]}, :include_blank => true %>
     <% end %>
   
     <%= f.association :subject %>

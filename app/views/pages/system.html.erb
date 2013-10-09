@@ -8,13 +8,28 @@
 
 <table><tr><td></td>
 
-<th style="width:200px"><p>Monday and Friday</p></th>
+
 
 </tr>
 
-<% @timeslots.each do |timeslot| %>
-<tr><td><p><%= timeslot.start.to_s(:time) %>-<%= timeslot.finish.to_s(:time) %></p></td></tr>
+<% @schedules.each do |schedule| %>
+
+<tr><td>
+	
+	<%= schedule.section_subject.jcon if schedule.day_timeslot.timeslot_id == 2 %><br>
+	<%= schedule.room.name if schedule.day_timeslot.timeslot_id == 2 %><br>
+	<%= schedule.professor.procon if schedule.day_timeslot.timeslot_id == 2 %><br>
+</td></tr>
+
+<tr><td>
+<%= schedule.section_subject.jcon if schedule.day_timeslot.timeslot_id == 3 %><br>
+<%= schedule.room.name if schedule.day_timeslot.timeslot_id == 3 %><br>
+<%= schedule.professor.procon if schedule.day_timeslot.timeslot_id == 3 %><br>
+</td></tr>
+
+
 <% end %>
-</tr></table>
+
+</table>
 
 </div>

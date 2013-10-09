@@ -14,8 +14,9 @@
   <tbody>
     <% @section_subjects.each do |section_subject| %>
       <tr>
-        <td><%= section_subject.section %></td>
-        <td><%= section_subject.subject %></td>
+        <td><%= section_subject.subject.name %></td>
+        <td><%= section_subject.section.seccon %></td>
+        
         <td><%= link_to 'Show', section_subject %></td>
         <td><%= link_to 'Edit', edit_section_subject_path(section_subject) %></td>
         <td><%= link_to 'Destroy', section_subject, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -7,4 +7,6 @@ class Section < ActiveRecord::Base
   	[name, department.name, yearlevel].join
   end
 
+  validates :name, :department_id, :yearlevel, :presence => true
+
 end

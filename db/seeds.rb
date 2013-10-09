@@ -6,7 +6,17 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+section_subjects = SectionSubject.create ([
+{subject_id: 157, section_id: 22},
+{subject_id: 55, section_id: 112},
+{subject_id: 53, section_id: 1},
+{subject_id: 55, section_id: 81},
+{subject_id: 180, section_id: 141},
+{subject_id: 180, section_id: 142},
+{subject_id: 180, section_id: 143},
+{subject_id: 180, section_id: 144}
 
+	])
 
 departments = Department.create ([
 
@@ -411,33 +421,130 @@ professors = Professor.create([
 
 
 timeslots = Timeslot.create([
-{start: '07:30', finish: '08:00'},
-{start: '08:00', finish: '08:30'},
-{start: '08:30', finish: '09:00'},
-{start: '09:00', finish: '09:30'},
-{start: '09:30', finish: '10:00'},
-{start: '10:00', finish: '10:30'},
-{start: '10:30', finish: '11:00'},
-{start: '11:00', finish: '11:30'},
-{start: '11:30', finish: '12:00'},
-{start: '12:00', finish: '12:30'},
-{start: '12:30', finish: '13:00'},
-{start: '13:00', finish: '13:30'},
-{start: '13:30', finish: '14:00'},
-{start: '14:00', finish: '14:30'},
-{start: '14:30', finish: '15:00'},
-{start: '15:00', finish: '15:30'},
-{start: '15:30', finish: '16:00'},
-{start: '16:00', finish: '16:30'},
-{start: '16:30', finish: '17:00'},
-{start: '17:00', finish: '17:30'},
-{start: '17:30', finish: '18:00'},
+{start: '07:30', finish: '08:30'},
+{start: '07:30', finish: '09:00'},
+{start: '07:30', finish: '09:30'},
+{start: '07:30', finish: '10:30'},
+
+{start: '08:00', finish: '09:00'},
+{start: '08:00', finish: '09:30'},
+{start: '08:00', finish: '10:00'},
+{start: '08:00', finish: '11:00'},
+
+{start: '08:30', finish: '09:30'},
+{start: '08:30', finish: '10:00'},
+{start: '08:30', finish: '10:30'},
+{start: '08:30', finish: '11:30'},
+
+{start: '09:00', finish: '10:00'},
+{start: '09:00', finish: '10:30'},
+{start: '09:00', finish: '11:00'},
+{start: '09:00', finish: '12:00'},
+
+{start: '09:30', finish: '10:30'},
+{start: '09:30', finish: '11:00'},
+{start: '09:30', finish: '11:30'},
+{start: '09:30', finish: '12:30'},
+
+{start: '10:00', finish: '11:00'},
+{start: '10:00', finish: '11:30'},
+{start: '10:00', finish: '12:00'},
+{start: '10:00', finish: '13:00'},
+
+{start: '10:30', finish: '11:30'},
+{start: '10:30', finish: '12:00'},
+{start: '10:30', finish: '12:30'},
+{start: '10:30', finish: '13:30'},
+
+{start: '11:00', finish: '12:00'},
+{start: '11:00', finish: '12:30'},
+{start: '11:00', finish: '13:00'},
+{start: '11:00', finish: '14:00'},
+
+{start: '11:30', finish: '12:30'},
+{start: '11:30', finish: '13:00'},
+{start: '11:30', finish: '13:30'},
+{start: '11:30', finish: '14:30'},
+
+{start: '12:00', finish: '13:00'},
+{start: '12:00', finish: '13:30'},
+{start: '12:00', finish: '14:00'},
+{start: '12:00', finish: '15:00'},
+
+{start: '12:30', finish: '13:30'},
+{start: '12:30', finish: '14:00'},
+{start: '12:30', finish: '14:30'},
+{start: '12:30', finish: '15:30'},
+
+{start: '13:00', finish: '14:00'},
+{start: '13:00', finish: '14:30'},
+{start: '13:00', finish: '15:00'},
+{start: '13:00', finish: '16:00'},
+
+{start: '13:30', finish: '14:30'},
+{start: '13:30', finish: '15:00'},
+{start: '13:30', finish: '15:30'},
+{start: '13:30', finish: '16:30'},
+
+{start: '14:00', finish: '15:00'},
+{start: '14:00', finish: '15:30'},
+{start: '14:00', finish: '16:00'},
+{start: '14:00', finish: '17:00'},
+
+{start: '14:30', finish: '15:30'},
+{start: '14:30', finish: '16:00'},
+{start: '14:30', finish: '16:30'},
+{start: '14:30', finish: '17:30'},
+
+{start: '15:00', finish: '16:00'},
+{start: '15:00', finish: '16:30'},
+{start: '15:00', finish: '17:00'},
+{start: '15:00', finish: '18:00'},
+
+{start: '15:30', finish: '16:30'},
+{start: '15:30', finish: '17:00'},
+{start: '15:30', finish: '17:30'},
+{start: '15:30', finish: '18:30'},
+
+{start: '16:00', finish: '17:00'},
+{start: '16:00', finish: '17:30'},
+{start: '16:00', finish: '18:00'},
+{start: '16:00', finish: '19:00'},
+
+{start: '16:30', finish: '17:30'},
+{start: '16:30', finish: '18:00'},
+{start: '16:30', finish: '18:30'},
+{start: '16:30', finish: '19:30'},
+
+{start: '17:00', finish: '18:00'},
+{start: '17:00', finish: '18:30'},
+{start: '17:00', finish: '19:00'},
+{start: '17:00', finish: '20:00'},
+
+{start: '17:30', finish: '18:30'},
+{start: '17:30', finish: '19:00'},
+{start: '17:30', finish: '19:30'},
+{start: '17:30', finish: '20:30'},
+
+{start: '18:10', finish: '19:10'},
 {start: '18:10', finish: '18:40'},
-{start: '18:40', finish: '19:10'},
-{start: '19:10', finish: '19:40'},
-{start: '19:40', finish: '20:10'},
-{start: '20:10', finish: '20:40'},
-{start: '20:40', finish: '21:10'}
+{start: '18:10', finish: '20:10'},
+{start: '18:10', finish: '21:10'},
+
+{start: '18:40', finish: '19:40'},
+{start: '18:40', finish: '20:10'},
+{start: '18:40', finish: '20:40'},
+
+{start: '19:10', finish: '20:10'},
+{start: '19:10', finish: '20:40'},
+{start: '19:10', finish: '21:10'},
+
+{start: '19:40', finish: '20:40'},
+{start: '19:40', finish: '21:10'},
+
+{start: '20:10', finish: '21:10'},
+
+
 
 	])
 

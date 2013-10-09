@@ -4,4 +4,10 @@ class SectionSubject < ActiveRecord::Base
 
   has_many :schedules
 
+  def jcon
+  	[subject.name, section.seccon].join
+  end
+
+  validates :section_id, :subject_id, :presence => true
+
 end
